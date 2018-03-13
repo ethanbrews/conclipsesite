@@ -1,0 +1,8 @@
+Blackish:      #111224
+red:           #ed254e
+grey (white):  #c2bcc5
+green (links): #00b295
+
+json key:      #7d44af
+json int:      #00a7e1
+json string:   #44af69

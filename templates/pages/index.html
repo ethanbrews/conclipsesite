@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Conclipse Games{% endblock %}
+{% block window_title %}Conclipse Games{% endblock %}
+{% block content %}
+<br/>
+<p class="grey">Minecraft Mods <span class="grey">{</span></p>
+<div class="tabbed">
+    <!--<p><a href="/pages/entropicmod">Entropic</a>: Minecraft magic themed mod with a small selection of useful blocks and items.</p>-->
+    <p><a disabled href="/pages/cgutilsmod">CG-Utils</a>: Minecraft server side utility mod for downloading resources and running commands.</p>
+    <p><a disabled href="/pages/atemod">Acro's Tactical Explosives</a>: Minecraft combat themed mod with different tiers of explosive.</p>
+    <p><a disabled href="/pages/greaterdruidrymod">Greater Druidry</a>: An addon to the <a href="https://minecraft.curseforge.com/projects/roots">roots</a> minecraft mod adding items and blocks keeping with the roots theme.</p>
+</div>
+<p class="grey">}</p>
+<p class="grey">Python Utilities {</p>
+<p class="tabbed"><a href="/pages/python_file_server">Python File Server</a>: A python update manager which serves users only the files they need to update their program. It requires a web server or other method of serving the files.</p>
+<p class="grey">}</p>
+<!--<p class="grey">iOS Apps {</p>
+<p class="tabbed"><a href="/pages/python_bundle_server">Empire iOS</a>: An iOS app for playing the <a href="http://www.bestpartygames.co.uk/games/empire-game">empire party game</a>. The app allows each user to input their name and then reveals them to the host. The host is alerted to name conflicts as the game starts so they can be resolved. The names can then be removed as they are guessed.</p>
+<p class="grey">}</p>-->
+{% endblock %}

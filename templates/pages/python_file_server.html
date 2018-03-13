@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Python File Server{% endblock %}
+{% block window_title %}Python File Server{% endblock %}
+{% block content %}
+<br/>
+
+<section>
+    <h3>About</h3>
+<pre>{
+    <span class="dim">"type"</span>: "Python Application"<span class="dim">,</span>
+    <span class="dim">"python-version"</span>: 3.5<span class="dim">,</span>
+    <span class="dim">"requirements"</span>: "Web server that can access the python API"<span class="dim">,</span>
+}</pre>
+</section>
+<section>
+    <h3>Download</h3>
+    <p>&lt;a href=<a href="https://github.com/ethanbrews/python_project_updater_server">"https://github.com/ethanbrews/python_project_updater_server"</a>&gt;<a href="https://github.com/ethanbrews/python_project_updater_server">GitHub Page</a>&lt;/a&gt;</p>
+</section>
+<section>
+    <h3>Usage</h3>
+    <p>The server will create a <span class="dim">config.json</span> file in the current working directory. This contains settings for where files should be saved, etc.</p>
+    <p>A web server will need to interact with the functions defined in <span class="dim">interface.py</span>.</p>
+    <h5>Functions</h5>
+<pre><span class="jsoni">add_pack</span>(in_path, pack_id, pack_version, pack_version_readable, pack_author)
+    <span class="jsont">str</span> in_path: <span class="jsons">The path of the updated modpack</span>
+    <span class="jsont">str</span> pack_id: <span class="jsons">The unique id of the modpack</span>
+    <span class="jsont">float</span> pack_version: <span class="jsons">The version to be given to the new pack update</span>
+    <span class="jsont">str</span>/<span class="jsont">None</span> pack_version_readable: <span class="jsons">The version name to be displayed to users</span>
+    <span class="jsont">str</span> pack_author: <span class="jsons">Author of the update. Separate multiple authors with commas</span>
+    <span class="jsonk">Returns</span>: <span class="jsont">bool</span> <span class="jsons">Whether pack was updated successfully</span>
+</pre>
+
+<pre><span class="jsoni">update_pack</span>(in_path, pack_id, pack_version, pack_version_readable, pack_author)
+    <span class="jsont">str</span> in_path: <span class="jsons">The path of the modpack</span>
+    <span class="jsont">str</span> pack_id: <span class="jsons">The unique id of the modpack</span>
+    <span class="jsont">float</span> pack_version: <span class="jsons">The current version of the pack</span>
+    <span class="jsont">str</span>/<span class="jsont">None</span> pack_version_readable: <span class="jsons">The version name to be displayed to users</span>
+    <span class="jsont">str</span> pack_author: <span class="jsons">Author of the pack. Separate multiple authors with commas</span>
+    <span class="jsonk">Returns</span>: <span class="jsont">bool</span> <span class="jsons">Whether pack was added successfully</span>
+
+</pre>
+<pre><span class="jsoni">get_update</span>(pack_id, current_version, target_version)
+    <span class="jsont">str</span> pack_id: <span class="jsons">The unique id of the modpack</span>
+    <span class="jsont">float</span> pack_version: <span class="jsons">The version the user has</span>
+    <span class="jsont">float</span> pack_version: <span class="jsons">The version the user wants</span>
+    <span class="jsonk">Returns</span>: <span class="jsont">bytes</span> <span class="jsons">Bytes data of zip file containing the update</span>
+</pre>
+</section>
+{% endblock %}
